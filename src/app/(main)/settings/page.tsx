@@ -200,7 +200,9 @@ export default function SettingsPage() {
       const data = await res.json();
       if (data.success) {
         showToast('Backup restored successfully');
-        loadSettings();
+        mutateProfile();
+        mutateTargets();
+        mutateAI();
       } else {
         showToast(data.error || 'Import failed', 'error');
       }
@@ -219,7 +221,9 @@ export default function SettingsPage() {
       const data = await res.json();
       if (data.success) {
         showToast('All data erased');
-        loadSettings();
+        mutateProfile();
+        mutateTargets();
+        mutateAI();
       }
     } catch {
       showToast('Failed to erase data', 'error');
