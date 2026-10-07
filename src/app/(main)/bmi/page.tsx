@@ -232,12 +232,12 @@ export default function BMIPage() {
               id="bmi-gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full px-3 py-2.5 text-sm border border-surface-200 rounded-xl"
+              className="w-full px-3 py-2.5 text-sm border border-surface-200 rounded-xl bg-transparent dark:bg-charcoal-900 dark:text-white"
             >
-              <option value="">Prefer not to say</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="" className="dark:bg-charcoal-800">Prefer not to say</option>
+              <option value="male" className="dark:bg-charcoal-800">Male</option>
+              <option value="female" className="dark:bg-charcoal-800">Female</option>
+              <option value="other" className="dark:bg-charcoal-800">Other</option>
             </select>
           </div>
         </div>
@@ -276,21 +276,21 @@ export default function BMIPage() {
 
           {/* BMI categories */}
           <div className="grid grid-cols-2 gap-2 mt-4 text-left text-xs">
-            <div className="flex items-center gap-2 p-2 rounded-lg bg-blue-50">
-              <span className="w-2 h-2 rounded-full bg-blue-400" />
-              <span className="text-charcoal-600">Underweight (&lt;18.5)</span>
+            <div className="flex items-center gap-2 p-2 rounded-lg bg-blue-50 dark:bg-blue-900/30">
+              <span className="w-2 h-2 rounded-full bg-blue-500" />
+              <span className="text-charcoal-700 dark:text-blue-100">Underweight (&lt;18.5)</span>
             </div>
-            <div className="flex items-center gap-2 p-2 rounded-lg bg-green-50">
-              <span className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-charcoal-600">Normal (18.5–24.9)</span>
+            <div className="flex items-center gap-2 p-2 rounded-lg bg-green-50 dark:bg-green-900/30">
+              <span className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-charcoal-700 dark:text-green-100">Normal (18.5–24.9)</span>
             </div>
-            <div className="flex items-center gap-2 p-2 rounded-lg bg-amber-50">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
-              <span className="text-charcoal-600">Overweight (25–29.9)</span>
+            <div className="flex items-center gap-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-900/30">
+              <span className="w-2 h-2 rounded-full bg-amber-500" />
+              <span className="text-charcoal-700 dark:text-amber-100">Overweight (25–29.9)</span>
             </div>
-            <div className="flex items-center gap-2 p-2 rounded-lg bg-red-50">
-              <span className="w-2 h-2 rounded-full bg-red-400" />
-              <span className="text-charcoal-600">Obese (30+)</span>
+            <div className="flex items-center gap-2 p-2 rounded-lg bg-red-50 dark:bg-red-900/30">
+              <span className="w-2 h-2 rounded-full bg-red-500" />
+              <span className="text-charcoal-700 dark:text-red-100">Obese (30+)</span>
             </div>
           </div>
 

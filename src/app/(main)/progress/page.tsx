@@ -111,7 +111,7 @@ export default function ProgressPage() {
 
     try {
       const res = await fetch('/api/weight-goal', {
-        method: 'POST',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
